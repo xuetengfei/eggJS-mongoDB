@@ -9,4 +9,5 @@ module.exports = app => {
   router.get('/news', controller.news.index);
   router.get('/add', controller.news.add);
   router.get('/other', controller.news.other);
+  router.get('/cookies-page', controller.cookies.set.index);
 };
