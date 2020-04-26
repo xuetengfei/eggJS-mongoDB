@@ -7,4 +7,5 @@ GET  http://localhost:7001/add
 ###
 GET  http://localhost:7001/other
 
-
+### crud/creat
+GET  http://localhost:7001/crud/creat

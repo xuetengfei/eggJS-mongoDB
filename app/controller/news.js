@@ -17,19 +17,20 @@ class NewsController extends Controller {
   }
   async add() {
     const { ctx, service } = this;
-    const roster = await service.mongo.add();
+    const { newuser, randomuser } = await service.mongo.add();
     ctx.body = {
       msg: 'news!',
-      list: roster,
+      list: newuser,
+      randomuser,
     };
   }
   async other() {
     const { ctx, service } = this;
-    const list = await service.mongo.other();
+    const res = await service.mongo.other();
     ctx.body = {
       msg: 'success!',
-      len: list.length,
-      list,
+      len: res.length,
+      res,
     };
   }
 }

@@ -21,12 +21,17 @@ module.exports = appInfo => {
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
+    myAppName: 'egg-02',
+    userDataInterface: 'https://randomuser.me/api/',
+    logger: {
+      dir: `${appInfo.root}/log`,
+    },
   };
 
   config.mongoose = {
     clients: {
       user: {
-        url: 'mongodb://127.0.0.1',
+        url: 'mongodb://127.0.0.1:27017',
         options: {
           useUnifiedTopology: true,
           dbName: 'user',
